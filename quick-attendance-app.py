@@ -3,8 +3,8 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
 # Display Title and Description
-st.title("Vendor Management Portal")
-st.markdown("Enter the details of the new vendor below.")
+st.title("CCS Quick Attendance Portal")
+st.markdown("enter your sins below")
 
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
