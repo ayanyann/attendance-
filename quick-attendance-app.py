@@ -50,8 +50,6 @@ if action == "Magpa Attendance":
         if submit_button:
             if not company_name or not business_type:
                 st.warning("Ensure all mandatory fields are filled.")
-            elif existing_data["ID"].astype(str).str.contains(company_name).any():
-                st.warning("A student with this ID already exists.")
             else:
                 vendor_data = pd.DataFrame([
                     {
