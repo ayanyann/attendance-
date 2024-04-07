@@ -134,6 +134,3 @@ elif action == "Mo lantaw sa naka Attendance":
         # Display the figure in the Streamlit app
         st.plotly_chart(fig, use_container_width=True)
 
-
-with cal2:
-    
