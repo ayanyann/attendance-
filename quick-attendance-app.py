@@ -133,4 +133,14 @@ elif action == "Mo lantaw sa naka Attendance":
 
         # Display the figure in the Streamlit app
         st.plotly_chart(fig, use_container_width=True)
+    with cal2:
+        # Create a line chart using Plotly
+        line_fig = px.line(
+        date_counts,
+        x='Date',
+        y='Count',
+        title='Daily Attendance'
+        )
 
+        # Display the figure in the Streamlit app
+        st.plotly_chart(line_fig, use_container_width=True)
