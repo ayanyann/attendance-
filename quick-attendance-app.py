@@ -103,19 +103,19 @@ elif action == "Mo lantaw sa naka Attendance":
         st.plotly_chart(pie_fig, use_container_width=True)
 
     # Grouping data by 'Major' and 'Department' and counting the number of students
-grouped_data = existing_data.groupby(['Major', 'Department']).size().reset_index(name='Counts')
+    grouped_data = existing_data.groupby(['Major', 'Department']).size().reset_index(name='Counts')
 
 # Creating a bubble chart using Plotly
-fig = px.scatter(
-    grouped_data,
-    x='Major',
-    y='Department',
-    size='Counts',  # Bubble size
-    color='Major',  # Color by 'Major'
-    hover_name='Major',  # Show 'Major' info on hover
-    size_max=60,  # Max size of the bubbles
-    title='Bubble Chart: Counts by Major and Department'
-)
+    fig = px.scatter(
+        grouped_data,
+        x='Major',
+        y='Department',
+        size='Counts',  # Bubble size
+        color='Major',  # Color by 'Major'
+        hover_name='Major',  # Show 'Major' info on hover
+        size_max=60,  # Max size of the bubbles
+        title='Bubble Chart: Counts by Major and Department'
+    )
 
-# Display the figure in the Streamlit app
-st.plotly_chart(fig, use_container_width=True)
+    # Display the figure in the Streamlit app
+    st.plotly_chart(fig, use_container_width=True)
