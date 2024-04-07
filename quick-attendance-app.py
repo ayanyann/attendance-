@@ -41,7 +41,7 @@ if action == "Magpa Attendance":
         company_name = st.text_input(label="ID Number*")
         business_type = st.selectbox("Major*", options=BUSINESS_TYPES, index=None)
         products = st.selectbox("Department (note: IT: for BSIS and BSIT, ESET: for BSCA, CSC: for BSCS)", options=PRODUCTS)
-        years_in_business = st.slider("Years", 1, 15, 5)
+        years_in_business = st.slider("Year Level", 1, 15, 5)
         onboarding_date = st.date_input(label="Current Date")
 
         st.markdown("**required*")
