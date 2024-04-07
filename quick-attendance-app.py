@@ -23,9 +23,17 @@ BUSINESS_TYPES = [
     "BSCA",
 ]
 PRODUCTS = [
-    "IT",
-    "ESET",
-    "CSC",
+    "JITS",
+    "COMAPPS",
+    "COMSOC",
+]
+
+YEAR = [
+    "1st Year",
+    "2nd Year",
+    "3rd Year",
+    "4th Year",
+    "extended (4th Year +)",
 ]
 
 action = st.selectbox(
@@ -42,8 +50,8 @@ if action == "Magpa Attendance":
         student_name = st.text_input(label="Name*")
         company_name = st.text_input(label="ID Number*")
         business_type = st.selectbox("Major*", options=BUSINESS_TYPES, index=None)
-        products = st.selectbox("Department (note: IT: for BSIS and BSIT, ESET: for BSCA, CSC: for BSCS)", options=PRODUCTS)
-        years_in_business = st.slider("Year Level (if extended, slide to year 5)", 1, 5, 3)
+        products = st.selectbox("Society (note: JITS: for BSIS and BSIT, COMAPPS: for BSCA, COMSOC: for BSCS)", options=PRODUCTS)
+        years_in_business = st.selectbox("Year Level*", options=YEAR)
         onboarding_date = st.date_input(label="Current Date")
 
         st.markdown("**required*")
