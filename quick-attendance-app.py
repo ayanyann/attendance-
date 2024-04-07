@@ -21,11 +21,13 @@ BUSINESS_TYPES = [
     "BSCS",
     "BSIT",
     "BSCA",
+    "Not Specified",
 ]
 PRODUCTS = [
     "JITS",
     "COMAPPS",
     "COMSOC",
+    "Not Specified",
 ]
 
 YEAR = [
@@ -34,6 +36,7 @@ YEAR = [
     "3rd Year",
     "4th Year",
     "extended (4th Year +)",
+    "Not Specified",
 ]
 
 action = st.selectbox(
