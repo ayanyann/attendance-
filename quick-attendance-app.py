@@ -3,7 +3,7 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 import plotly.express as px
 
-col1, col2 = st.columns(2)
+
 # Display Title and Description
 st.title("CCS Quick Attendance Portal")
 st.markdown("enter your sins below")
@@ -70,6 +70,8 @@ if action == "Magpa Attendance":
 
 elif action == "Mo lantaw sa naka Attendance":
     st.dataframe(existing_data)
+    
+    col1, col2 = st.columns(2)
     with col1:
         # Aggregate data by 'Year' to get the count of attendance per year
         year_counts = existing_data['Year'].value_counts().reset_index()
