@@ -58,7 +58,7 @@ if action == "Magpa Attendance":
         submit_button = st.form_submit_button(label="Submit Details")
 
         if submit_button:
-            if not company_name or not business_type:
+            if not company_name:
                 st.warning("Ensure all mandatory fields are filled.")
             else:
                 vendor_data = pd.DataFrame([
