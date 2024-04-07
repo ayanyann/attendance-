@@ -134,6 +134,8 @@ elif action == "Mo lantaw sa naka Attendance":
         # Display the figure in the Streamlit app
         st.plotly_chart(fig, use_container_width=True)
     with cal2:
+        date_counts = existing_data.groupby('Date')['ID'].nunique().reset_index(name='Count')
+
         # Create a line chart using Plotly
         line_fig = px.line(
         date_counts,
