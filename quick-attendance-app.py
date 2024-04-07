@@ -70,12 +70,10 @@ if action == "Magpa Attendance":
 
 elif action == "Mo lantaw sa naka Attendance":
     st.dataframe(existing_data)
-    # Aggregate data by 'Year' to get the count of attendance per year
-    year_counts = existing_data['Year'].value_counts().reset_index()
+     # Count the occurrences of each "Year" in the "Year" column
+    year_counts = existing_data["Year"].value_counts().reset_index()
     year_counts.columns = ['Year', 'Count']  # Renaming columns for clarity
-
+    
     # Create a bar chart using Plotly
-    fig = px.bar(year_counts, x='Year', y='Count', title='Attendance Count by Year')
-
-    # Display the figure in the Streamlit app
-    st.plotly_chart(fig)
+    fig = px.bar(year_counts, x='Year', y='Count', title='Attendance by Year')
+    st.plotly_chart(fig)  # Display the figure in the Streamlit app
