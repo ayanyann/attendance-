@@ -77,3 +77,12 @@ elif action == "Mo lantaw sa naka Attendance":
     # Create a bar chart using Plotly
     fig = px.bar(year_counts, x='Year', y='Count', title='Attendance by Year')
     st.plotly_chart(fig)  # Display the figure in the Streamlit app
+
+    
+     # For Pie Chart of Majors
+    major_counts = existing_data["Major"].value_counts().reset_index()
+    major_counts.columns = ['Major', 'Count']  # Renaming columns for clarity
+    
+    # Create a pie chart using Plotly
+    pie_fig = px.pie(major_counts, values='Count', names='Major', title='Distribution of Majors')
+    st.plotly_chart(pie_fig)  # Display the pie chart in the Streamlit app
