@@ -5,8 +5,8 @@ import plotly.express as px
 
 
 # Display Title and Description
-st.title("CCS Quick Attendance Portal")
-st.markdown("enter your sins below")
+st.title("CCS Quick Attendance Portal 🩵🐺")
+st.markdown("enter your details below")
 
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
